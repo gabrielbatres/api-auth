@@ -12,6 +12,11 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      AUTH_USER_NAME: ${{ secrets.AUTH_USER_NAME }}
+      AUTH_USER_PASSWORD: ${{ secrets.AUTH_USER_PASSWORD }}
+      AUTH_ISSUER_URI: ${{ secrets.AUTH_ISSUER_URI }}
+      AUTH_REDIRECT_URI: ${{ secrets.AUTH_REDIRECT_URI }}
 
     steps:
       - uses: actions/checkout@v4
